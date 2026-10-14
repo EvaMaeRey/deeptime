@@ -52,8 +52,8 @@ coral_div <- corals |> filter(stage != "") |>
                         stages$min_age[match(stage, stages$name)])/2)
 ggplot(coral_div) +
   geom_line(aes(x = stage_age, y = n)) +
-  scale_x_reverse("Age (Ma)") +
-  ylab("Coral Genera") +
+  scale_x_reverse() +
+  labs(x = "Age (Ma)", y = "Coral Genera") +
   coord_geo(xlim = c(250, 0), ylim = c(0, 1700)) +
   theme_classic(base_size = 16)
 ```
